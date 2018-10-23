@@ -19,7 +19,7 @@ class Router extends React.Component {
         return (
             <Context.Provider value={ProviderValue}>
                 <Context.Consumer>
-                    {context => <Route {...context} />}
+                    {context => <Route {...context} {...this.props} />}
                 </Context.Consumer>
             </Context.Provider>
         )

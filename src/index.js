@@ -4,8 +4,14 @@ import ReactDOM from 'react-dom'
 import './styles.css'
 import Router from './router/Router'
 
-function App() {
-    return <Router />
+class App extends React.Component {
+    state = {
+        gameMode: 'fun',
+        timerLength: 30000
+    }
+    render() {
+        return <Router {...this.state} />
+    }
 }
 
 const rootElement = document.getElementById('root')
